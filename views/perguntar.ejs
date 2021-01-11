@@ -1,0 +1,31 @@
+<!-- partial é uma parcela do código que mandei para outra aba do programa para reutilizar quando e quantas vezes eu quiser. Para fazer isso copiei o respectivo trecho de código para a aba nova-->
+<%- include ('./partials/header.ejs') %>
+<body>
+  <%- include ('./partials/navbar.ejs') %>
+    <!-- container é uma ferramenta para deixar tudo centralizado no meu site. Escrevo tudo dentro dela -->
+    <div class="container"> 
+        <!-- card é para colocar o conteudo todo dentro de um quadro-->
+        <div class="card" id="card1">
+            <div  class="card-header"> <!-- cabeça do card -->
+                <h3>Formulário de Perguntas</h3>
+            </div> <!--card-header-->
+            <div class="card-body"> <!-- corpo do card-->
+                <hr>
+                <!-- O METHOD POST É USADO PARA FORMULÁRIO POIS NÃO MOSTRA OS DADOS RECEBIDOS NO FRONT -->
+                <!-- com action estou designando uma porta para  o formulário-->
+                <form method="POST" action="/salvarpergunta">
+                    <label>Título</label> <!-- é o título que vai em cima da caixa-->
+                    <!-- placeholder é o que aparece no fundo do quadrado-->
+                    <!-- quando uso name estou identificando essa minha tag para chamá-la em outro lugar-->
+                    <input type="text" placeholder="Título" class="form-control"  name="titulo"> 
+                    <br> <label>Descrição</label>
+                    <!-- form-control é pré estabelecido pelo bootstrap e deixa as medidas ajustadas-->                        
+                    <textarea placeholder="Descreva a sua pergunta aqui!"  class="form-control"  name="descricao"></textarea>
+                    <!-- essa class btn é padrão é já estiliza o botão -->
+                    <br><button class="btn btn-primary">Perguntar</button>
+                </form>
+            </div> <!--card-body-->
+        </div> <!--card-->
+    </div> <!-- container -->
+</body>
+<%- include ('./partials/footer.ejs') %>

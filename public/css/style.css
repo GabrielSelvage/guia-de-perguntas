@@ -1,0 +1,12 @@
+body{
+    background-color: rgba(12, 95, 40, 0.562);
+}
+
+#logo {
+    max-width: 80px;
+    margin: 0 auto;
+}
+
+#card1{
+    margin-top: 5%;
+}
